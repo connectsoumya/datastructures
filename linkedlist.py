@@ -32,6 +32,13 @@ class LinkedList(object):
         previous_node.next = next_node
         current_node.next = None
 
+    def search(self, node_data):
+        current_node = self.head
+        while current_node.data != node_data:
+            current_node = current_node.next
+        next_node = current_node.next
+        return next_node
+
 
 
 if __name__ == '__main__':
